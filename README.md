@@ -7,6 +7,7 @@ https://prod.liveshare.vsengsaas.visualstudio.com/join?3B071B389C5B82D4AA4388F11
 | Eduardo Francisco Mauro Gonçalves | RM561969 |
 | Gabriel Luchetta dos Santos | RM561861 |
 | Matheus Henrique Ferreirra Camargo da Silva | RM566232 |
+| Rhariel Marcelo de Oliveira Permanhani | RM566310 |
 
 ---
 
