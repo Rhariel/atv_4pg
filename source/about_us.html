@@ -6,6 +6,45 @@
     <title>Sobre Nós</title>
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Sobre Nós - Café Moka</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <svg class="coffee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                        <line x1="6" y1="1" x2="6" y2="4"/>
+                        <line x1="10" y1="1" x2="10" y2="4"/>
+                        <line x1="14" y1="1" x2="14" y2="4"/>
+                    </svg>
+                    <span class="logo-text">MócaFé</span>
+                </div>
+                <nav class="nav" id="nav">
+                    <a href="../index.html" class="nav-link">Início</a>
+                    <a href="about_us.html" class="nav-link">Sobre</a>
+                    <a href="prudutos.html" class="nav-link">Menu</a>
+                    <a href="login.html" class="nav-link">Login</a>
+                </nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
     <section id="about" class="about">
         <div class="container">
             <div class="about-grid">
@@ -37,12 +76,48 @@
                 </div>
                 <div class="about-image">
                     <div class="image-wrapper">
-                        <img src="/placeholder.svg?height=600&width=500" alt="Barista preparando café">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=500&fit=crop" alt="Barista preparando café">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg class="coffee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                        <line x1="6" y1="1" x2="6" y2="4"/>
+                        <line x1="10" y1="1" x2="10" y2="4"/>
+                        <line x1="14" y1="1" x2="14" y2="4"/>
+                    </svg>
+                    <span>Café 214</span>
+                </div>
+                <p class="footer-text">© 2024 MOKAFÉ. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const nav = document.getElementById('nav');
+            
+            if (mobileMenuBtn && nav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    nav.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
     
 </body>
 </html>

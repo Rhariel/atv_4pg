@@ -3,10 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Moka - Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Menu - Café Moka</title>
 </head>
 <body>
-    <!-- Menu Section -->
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <svg class="coffee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                        <line x1="6" y1="1" x2="6" y2="4"/>
+                        <line x1="10" y1="1" x2="10" y2="4"/>
+                        <line x1="14" y1="1" x2="14" y2="4"/>
+                    </svg>
+                    <span class="logo-text">MócaFé</span>
+                </div>
+                <nav class="nav" id="nav">
+                    <a href="../index.html" class="nav-link">Início</a>
+                    <a href="about_us.html" class="nav-link">Sobre</a>
+                    <a href="prudutos.html" class="nav-link">Menu</a>
+                    <a href="login.html" class="nav-link">Login</a>
+                </nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
     <section id="menu" class="menu">
         <div class="container">
             <div class="section-header">
@@ -22,7 +51,7 @@
             <div class="menu-grid" id="menuGrid">
                 <!-- Espresso Signature 214 -->
                 <div class="menu-item" data-category="coffee">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Espresso Signature 214" class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=300&h=200&fit=crop" alt="Espresso Signature 214" class="menu-item-image">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">Espresso Signature 214</h3>
@@ -34,7 +63,7 @@
 
                 <!-- Cappuccino Premium -->
                 <div class="menu-item" data-category="coffee">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Cappuccino Premium" class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&h=200&fit=crop" alt="Cappuccino Premium" class="menu-item-image">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">Cappuccino Premium</h3>
@@ -46,7 +75,7 @@
 
                 <!-- Cold Brew Artesanal -->
                 <div class="menu-item" data-category="coffee">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Cold Brew Artesanal" class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=300&h=200&fit=crop" alt="Cold Brew Artesanal" class="menu-item-image">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">Cold Brew Artesanal</h3>
@@ -58,7 +87,7 @@
 
                 <!-- Croissant Francês -->
                 <div class="menu-item" data-category="food">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Croissant Francês" class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab794f1083c7?w=300&h=200&fit=crop" alt="Croissant Francês" class="menu-item-image">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">Croissant Francês</h3>
@@ -70,7 +99,7 @@
 
                 <!-- Cheesecake do Dia -->
                 <div class="menu-item" data-category="food">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Cheesecake do Dia" class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=300&h=200&fit=crop" alt="Cheesecake do Dia" class="menu-item-image">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">Cheesecake do Dia</h3>
@@ -82,7 +111,7 @@
 
                 <!-- Sanduíche Gourmet -->
                 <div class="menu-item" data-category="food">
-                    <img src="/placeholder.svg?height=200&width=300" alt="Sanduíche Gourmet" class="menu-item-image">
+                    <img src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=300&h=200&fit=crop" alt="Sanduíche Gourmet" class="menu-item-image">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-name">Sanduíche Gourmet</h3>
@@ -94,6 +123,61 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg class="coffee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                        <line x1="6" y1="1" x2="6" y2="4"/>
+                        <line x1="10" y1="1" x2="10" y2="4"/>
+                        <line x1="14" y1="1" x2="14" y2="4"/>
+                    </svg>
+                    <span>Café 214</span>
+                </div>
+                <p class="footer-text">© 2024 MOKAFÉ. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function filterMenu(category) {
+            const menuItems = document.querySelectorAll('.menu-item');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Show/hide menu items
+            menuItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                if (category === 'all' || itemCategory === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Mobile menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const nav = document.getElementById('nav');
+            
+            if (mobileMenuBtn && nav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    nav.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
