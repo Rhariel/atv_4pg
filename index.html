@@ -3,84 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="source/style.css">
     <title>Café Moka - Onde cada xícara conta uma história</title>
-    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #b45309;
+            --primary-dark: #92400e;
+            --secondary-color: #fbbf24;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(180, 83, 9, 0.3)),
+                        url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1920&h=1080&fit=crop') center/cover;
+            color: white;
+        }
+        
+        .coffee-icon {
+            width: 2rem;
+            height: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+        
+        .text-primary-custom {
+            color: var(--primary-color) !important;
+        }
+        
+        .bg-primary-custom {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .bg-dark-custom {
+            background-color: #1c1917 !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <svg class="coffee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
-                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
-                        <line x1="6" y1="1" x2="6" y2="4"/>
-                        <line x1="10" y1="1" x2="10" y2="4"/>
-                        <line x1="14" y1="1" x2="14" y2="4"/>
-                    </svg>
-                    <span class="logo-text">MócaFé</span>
-                </div>
-                <nav class="nav" id="nav">
-                    <a href="index.html" class="nav-link">Início</a>
-                    <a href="source/about_us.html" class="nav-link">Sobre</a>
-                    <a href="source/produtos.html" class="nav-link">Menu</a>
-                    <a href="source/login.html" class="nav-link">Login</a>
-                </nav>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <svg class="coffee-icon me-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                    <line x1="6" y1="1" x2="6" y2="4"/>
+                    <line x1="10" y1="1" x2="10" y2="4"/>
+                    <line x1="14" y1="1" x2="14" y2="4"/>
+                </svg>
+                <span class="playfair fw-bold fs-4">MócaFé</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="source/about_us.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="source/prudutos.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="source/produtos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="source/login.html">Login</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Café Moka</h1>
-            <p class="hero-subtitle">Onde cada xícara conta uma história de qualidade e sofisticação</p>
-            <button class="cta-button" onclick="location.href='source/prudutos.html'">
-                <span>Conheça Nosso Menu</span>
-            </button>
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-1 playfair fw-bold mb-4">Café Moka</h1>
+                    <p class="lead fs-3 mb-4">Onde cada xícara conta uma história de qualidade e sofisticação</p>
+                    <a href="source/prudutos.html" class="btn btn-primary btn-lg px-4 py-3">
+                        Conheça Nosso Menu
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="py-5 bg-white">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <div class="section-badge">Nossa Essência</div>
-                    <h2 class="section-title">Nossa História</h2>
-                    <p class="about-text">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <span class="badge bg-primary-custom text-white rounded-pill px-3 py-2 mb-3">Nossa Essência</span>
+                    <h2 class="playfair display-4 fw-bold mb-4">Nossa História</h2>
+                    <p class="fs-5 text-secondary mb-4">
                         O Café Moka nasceu da paixão por criar experiências únicas através do café. Combinamos tradição e
                         inovação para oferecer aos nossos clientes momentos especiais em um ambiente sofisticado e acolhedor.
                     </p>
-                    <p class="about-text">
+                    <p class="fs-5 text-secondary mb-4">
                         Cada grão é cuidadosamente selecionado, cada bebida é preparada com maestria, e cada detalhe é pensado
                         para proporcionar uma experiência memorável.
                     </p>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Anos de Experiência</div>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="text-center p-3 bg-light rounded">
+                                <div class="playfair display-5 text-primary-custom fw-bold">5+</div>
+                                <small class="text-secondary">Anos de Experiência</small>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">1000+</div>
-                            <div class="stat-label">Clientes Satisfeitos</div>
+                        <div class="col-md-4">
+                            <div class="text-center p-3 bg-light rounded">
+                                <div class="playfair display-5 text-primary-custom fw-bold">1000+</div>
+                                <small class="text-secondary">Clientes Satisfeitos</small>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Variedades de Café</div>
+                        <div class="col-md-4">
+                            <div class="text-center p-3 bg-light rounded">
+                                <div class="playfair display-5 text-primary-custom fw-bold">50+</div>
+                                <small class="text-secondary">Variedades de Café</small>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <div class="image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=500&fit=crop" alt="Barista preparando café">
+                <div class="col-lg-6">
+                    <div class="p-3">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=500&fit=crop" 
+                             alt="Barista preparando café" class="img-fluid rounded shadow">
                     </div>
                 </div>
             </div>
@@ -88,141 +162,107 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="py-5 bg-dark-custom text-white">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="section-badge light">Localização</div>
-                    <h2 class="section-title">Visite-nos</h2>
-                    <div class="contact-items">
-                        <div class="contact-item">
-                            <div class="contact-icon-wrapper">
-                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                    <circle cx="12" cy="10" r="3"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3>Endereço</h3>
-                                <p>Rua das Flores, 214<br>Centro, São Paulo - SP</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon-wrapper">
-                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <polyline points="12,6 12,12 16,14"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3>Horário de Funcionamento</h3>
-                                <p>Segunda a Sexta: 7h às 20h<br>Sábado e Domingo: 8h às 18h</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <span class="badge bg-warning text-dark rounded-pill px-3 py-2 mb-3">Localização</span>
+                    <h2 class="playfair display-4 fw-bold mb-4">Visite-nos</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="bg-primary-custom rounded-circle p-3 me-3 flex-shrink-0">
+                                    <i class="bi bi-geo-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-2">Endereço</h5>
+                                    <p class="text-light mb-0">Rua das Flores, 214<br>Centro, São Paulo - SP</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon-wrapper">
-                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3>Telefone</h3>
-                                <p>(11) 9999-9999</p>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="bg-primary-custom rounded-circle p-3 me-3 flex-shrink-0">
+                                    <i class="bi bi-clock text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-2">Horário</h5>
+                                    <p class="text-light mb-0">Segunda a Sexta: 7h às 20h<br>Sábado e Domingo: 8h às 18h</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon-wrapper">
-                                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
-                                </svg>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="bg-primary-custom rounded-circle p-3 me-3 flex-shrink-0">
+                                    <i class="bi bi-telephone text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-2">Telefone</h5>
+                                    <p class="text-light mb-0">(11) 9999-9999</p>
+                                </div>
                             </div>
-                            <div>
-                                <h3>E-mail</h3>
-                                <p>contato@cafe214.com.br</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="bg-primary-custom rounded-circle p-3 me-3 flex-shrink-0">
+                                    <i class="bi bi-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-2">E-mail</h5>
+                                    <p class="text-light mb-0">contato@cafe214.com.br</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form-wrapper">
-                    <h3 class="form-title">Entre em Contato</h3>
-                    <form class="contact-form" id="contactForm">
-                        <input type="text" placeholder="Seu nome" required>
-                        <input type="email" placeholder="Seu e-mail" required>
-                        <textarea placeholder="Sua mensagem" rows="4" required></textarea>
-                        <button type="submit" class="submit-button">Enviar Mensagem</button>
-                    </form>
+                <div class="col-lg-6">
+                    <div class="bg-secondary bg-opacity-25 p-4 rounded">
+                        <h3 class="playfair fw-bold mb-4">Entre em Contato</h3>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control bg-transparent text-white border-light" 
+                                       placeholder="Seu nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control bg-transparent text-white border-light" 
+                                       placeholder="Seu e-mail" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control bg-transparent text-white border-light" rows="4" 
+                                         placeholder="Sua mensagem" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Enviar Mensagem</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="bg-dark py-4">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <svg class="coffee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
-                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
-                        <line x1="6" y1="1" x2="6" y2="4"/>
-                        <line x1="10" y1="1" x2="10" y2="4"/>
-                        <line x1="14" y1="1" x2="14" y2="4"/>
-                    </svg>
-                    <span>Café 214</span>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <svg class="coffee-icon me-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: #fbbf24;">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                            <line x1="6" y1="1" x2="6" y2="4"/>
+                            <line x1="10" y1="1" x2="10" y2="4"/>
+                            <line x1="14" y1="1" x2="14" y2="4"/>
+                        </svg>
+                        <span class="playfair fw-bold fs-5 text-white">Café 214</span>
+                    </div>
                 </div>
-                <p class="footer-text">© 2024 MOKAFÉ. Todos os direitos reservados.</p>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-light mb-0">© 2024 MOKAFÉ. Todos os direitos reservados.</p>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const nav = document.getElementById('nav');
-            
-            if (mobileMenuBtn && nav) {
-                mobileMenuBtn.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    nav.classList.toggle('active');
-                });
-            }
-
-            // Contact form
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    alert('Mensagem enviada com sucesso!');
-                    this.reset();
-                });
-            }
-
-            // Smooth scrolling for nav links
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                if (link.getAttribute('href').startsWith('#')) {
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        const targetId = this.getAttribute('href').substring(1);
-                        scrollToSection(targetId);
-                    });
-                }
-            });
-        });
-
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                const offsetTop = section.offsetTop - 80;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    </script>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -3,121 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Menu - Café Moka</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #b45309;
+            --primary-dark: #92400e;
+            --secondary-color: #fbbf24;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            padding-top: 76px;
+        }
+        
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .coffee-icon {
+            width: 2rem;
+            height: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+        
+        .text-primary-custom {
+            color: var(--primary-color) !important;
+        }
+        
+        .bg-primary-custom {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .menu-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <svg class="coffee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
-                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
-                        <line x1="6" y1="1" x2="6" y2="4"/>
-                        <line x1="10" y1="1" x2="10" y2="4"/>
-                        <line x1="14" y1="1" x2="14" y2="4"/>
-                    </svg>
-                    <span class="logo-text">MócaFé</span>
-                </div>
-                <nav class="nav" id="nav">
-                    <a href="../index.html" class="nav-link">Início</a>
-                    <a href="about_us.html" class="nav-link">Sobre</a>
-                    <a href="prudutos.html" class="nav-link">Menu</a>
-                    <a href="login.html" class="nav-link">Login</a>
-                </nav>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <svg class="coffee-icon me-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                    <line x1="6" y1="1" x2="6" y2="4"/>
+                    <line x1="10" y1="1" x2="10" y2="4"/>
+                    <line x1="14" y1="1" x2="14" y2="4"/>
+                </svg>
+                <span class="playfair fw-bold fs-4">MócaFé</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_us.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="prudutos.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produtos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </header>
-    <section id="menu" class="menu">
+    </nav>
+    <!-- Menu Section -->
+    <section class="py-5" style="margin-top: 80px;">
         <div class="container">
-            <div class="section-header">
-                <div class="section-badge">Sabores Únicos</div>
-                <h2 class="section-title">Menu Especial</h2>
-                <p class="section-subtitle">Descubra nossa seleção cuidadosa de cafés especiais e acompanhamentos artesanais</p>
+            <div class="text-center mb-5">
+                <span class="badge bg-primary-custom text-white px-3 py-2 mb-3 playfair">Sabores Únicos</span>
+                <h2 class="display-4 playfair fw-bold text-primary-custom mb-3">Menu Especial</h2>
+                <p class="lead text-muted">Descubra nossa seleção cuidadosa de cafés especiais e acompanhamentos artesanais</p>
             </div>
-            <div class="menu-filter">
-                <button class="filter-btn active" onclick="filterMenu('all')">Todos</button>
-                <button class="filter-btn" onclick="filterMenu('coffee')">Cafés</button>
-                <button class="filter-btn" onclick="filterMenu('food')">Acompanhamentos</button>
+            <div class="text-center mb-5">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-primary active" data-bs-toggle="button" data-filter="all">Todos</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="button" data-filter="coffee">Cafés</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="button" data-filter="food">Acompanhamentos</button>
+                </div>
             </div>
-            <div class="menu-grid" id="menuGrid">
+            <div class="row g-4" id="menuGrid">
                 <!-- Espresso Signature 214 -->
-                <div class="menu-item" data-category="coffee">
-                    <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=300&h=200&fit=crop" alt="Espresso Signature 214" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3 class="menu-item-name">Espresso Signature 214</h3>
-                            <span class="menu-item-price">R$ 8,50</span>
+                <div class="col-lg-4 col-md-6" data-category="coffee">
+                    <div class="card h-100 menu-card border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=300&h=200&fit=crop" 
+                             alt="Espresso Signature 214" class="card-img-top" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title text-primary-custom mb-0">Espresso Signature 214</h5>
+                                <span class="badge bg-primary-custom text-white fs-6">R$ 8,50</span>
+                            </div>
+                            <p class="card-text text-muted">Blend exclusivo da casa com notas de chocolate e caramelo</p>
                         </div>
-                        <p class="menu-item-description">Blend exclusivo da casa com notas de chocolate e caramelo</p>
                     </div>
                 </div>
 
                 <!-- Cappuccino Premium -->
-                <div class="menu-item" data-category="coffee">
-                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&h=200&fit=crop" alt="Cappuccino Premium" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3 class="menu-item-name">Cappuccino Premium</h3>
-                            <span class="menu-item-price">R$ 12,00</span>
+                <div class="col-lg-4 col-md-6" data-category="coffee">
+                    <div class="card h-100 menu-card border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&h=200&fit=crop" 
+                             alt="Cappuccino Premium" class="card-img-top" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title text-primary-custom mb-0">Cappuccino Premium</h5>
+                                <span class="badge bg-primary-custom text-white fs-6">R$ 12,00</span>
+                            </div>
+                            <p class="card-text text-muted">Espuma cremosa e café encorpado com toque de canela</p>
                         </div>
-                        <p class="menu-item-description">Espuma cremosa e café encorpado com toque de canela</p>
                     </div>
                 </div>
 
                 <!-- Cold Brew Artesanal -->
-                <div class="menu-item" data-category="coffee">
-                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=300&h=200&fit=crop" alt="Cold Brew Artesanal" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3 class="menu-item-name">Cold Brew Artesanal</h3>
-                            <span class="menu-item-price">R$ 14,00</span>
+                <div class="col-lg-4 col-md-6" data-category="coffee">
+                    <div class="card h-100 menu-card border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=300&h=200&fit=crop" 
+                             alt="Cold Brew Artesanal" class="card-img-top" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title text-primary-custom mb-0">Cold Brew Artesanal</h5>
+                                <span class="badge bg-primary-custom text-white fs-6">R$ 14,00</span>
+                            </div>
+                            <p class="card-text text-muted">Extração a frio por 12 horas, sabor suave e refrescante</p>
                         </div>
-                        <p class="menu-item-description">Extração a frio por 12 horas, sabor suave e refrescante</p>
                     </div>
                 </div>
 
                 <!-- Croissant Francês -->
-                <div class="menu-item" data-category="food">
-                    <img src="https://images.unsplash.com/photo-1555507036-ab794f1083c7?w=300&h=200&fit=crop" alt="Croissant Francês" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3 class="menu-item-name">Croissant Francês</h3>
-                            <span class="menu-item-price">R$ 9,00</span>
+                <div class="col-lg-4 col-md-6" data-category="food">
+                    <div class="card h-100 menu-card border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab794f1083c7?w=300&h=200&fit=crop" 
+                             alt="Croissant Francês" class="card-img-top" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title text-primary-custom mb-0">Croissant Francês</h5>
+                                <span class="badge bg-primary-custom text-white fs-6">R$ 9,00</span>
+                            </div>
+                            <p class="card-text text-muted">Massa folhada artesanal, crocante por fora e macio por dentro</p>
                         </div>
-                        <p class="menu-item-description">Massa folhada artesanal, crocante por fora e macio por dentro</p>
                     </div>
                 </div>
 
                 <!-- Cheesecake do Dia -->
-                <div class="menu-item" data-category="food">
-                    <img src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=300&h=200&fit=crop" alt="Cheesecake do Dia" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3 class="menu-item-name">Cheesecake do Dia</h3>
-                            <span class="menu-item-price">R$ 16,00</span>
+                <div class="col-lg-4 col-md-6" data-category="food">
+                    <div class="card h-100 menu-card border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=300&h=200&fit=crop" 
+                             alt="Cheesecake do Dia" class="card-img-top" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title text-primary-custom mb-0">Cheesecake do Dia</h5>
+                                <span class="badge bg-primary-custom text-white fs-6">R$ 16,00</span>
+                            </div>
+                            <p class="card-text text-muted">Receita especial que muda semanalmente</p>
                         </div>
-                        <p class="menu-item-description">Receita especial que muda semanalmente</p>
                     </div>
                 </div>
 
                 <!-- Sanduíche Gourmet -->
-                <div class="menu-item" data-category="food">
-                    <img src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=300&h=200&fit=crop" alt="Sanduíche Gourmet" class="menu-item-image">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3 class="menu-item-name">Sanduíche Gourmet</h3>
-                            <span class="menu-item-price">R$ 18,00</span>
+                <div class="col-lg-4 col-md-6" data-category="food">
+                    <div class="card h-100 menu-card border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=300&h=200&fit=crop" 
+                             alt="Sanduíche Gourmet" class="card-img-top" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title text-primary-custom mb-0">Sanduíche Gourmet</h5>
+                                <span class="badge bg-primary-custom text-white fs-6">R$ 18,00</span>
+                            </div>
+                            <p class="card-text text-muted">Ingredientes selecionados em pão artesanal</p>
                         </div>
-                        <p class="menu-item-description">Ingredientes selecionados em pão artesanal</p>
                     </div>
                 </div>
             </div>
@@ -125,59 +208,26 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="bg-dark text-white py-4 mt-5">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <svg class="coffee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <div class="d-flex align-items-center mb-3 mb-md-0">
+                    <svg class="coffee-icon me-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
                         <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
                         <line x1="6" y1="1" x2="6" y2="4"/>
                         <line x1="10" y1="1" x2="10" y2="4"/>
                         <line x1="14" y1="1" x2="14" y2="4"/>
                     </svg>
-                    <span>Café 214</span>
+                    <span class="playfair fw-bold">MócaFé</span>
                 </div>
-                <p class="footer-text">© 2024 MOKAFÉ. Todos os direitos reservados.</p>
+                <p class="mb-0 text-center text-md-end">© 2024 MOKAFÉ. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        function filterMenu(category) {
-            const menuItems = document.querySelectorAll('.menu-item');
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            
-            // Remove active class from all buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
-            event.target.classList.add('active');
-            
-            // Show/hide menu items
-            menuItems.forEach(item => {
-                const itemCategory = item.getAttribute('data-category');
-                if (category === 'all' || itemCategory === category) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-
-        // Mobile menu
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const nav = document.getElementById('nav');
-            
-            if (mobileMenuBtn && nav) {
-                mobileMenuBtn.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    nav.classList.toggle('active');
-                });
-            }
-        });
-    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
